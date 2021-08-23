@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Event List</title>
+</head>
+<body>
+    <style>
+    </style>
+    <table>
+        <table class="table table-striped">
+            <div class="heading">
+                <h1>Events List</h1>
+            </div>
+        <tr>
+        <th>Name</th>
+        <th>Event_id</th>
+        <th>Date</th>
+        <th>Agenda</th>
+        <th>Venue</th>
+        <th>Duration</th>
+        <th>No. of attendees</th>
+        <th>Event planner</th>
+        <th>Activity</th>
+        <th>Approved_by</th>
+        </tr>
+        <tr>
+            {% for event in events %}
+            <td>{{event.event_name}}</td>
+            <td>{{event.event_id}}</td>
+            <td>{{event.event_date}}</td>
+            <td>{{event.event_agenda}}</td>
+            <td>{{event.event_venue}}</td>
+            <td>{{event.event_duration}}</td>
+            <td>{{event.number_of_event_attendees}}</td>
+            <td>{{event.event_planner}}</td>
+            <td>{{event.event_activity}}</td>
+            <td>{{event.event_approved_by}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</table>
+    <style>
+
+    body{
+   background-color: rgb(69, 196, 196);
+}
+.heading{
+    
+    text-align: center;
+}
+
+    </style>
+</body>
+</html>

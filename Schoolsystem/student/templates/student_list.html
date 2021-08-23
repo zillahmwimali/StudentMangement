@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Students_list</title>
+</head>
+<body>
+<table>
+<table class="table table-striped">
+    <div class="heading">
+        <h1>Students List</h1>
+    </div>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Gender</th>
+<th>Age</th>
+<th>Email</th>
+<th>Languages</th>
+<th>ID Number</th>
+<th>Phone Number</th>
+<th>Room Number</th>
+<th>Mentors name</th>
+<th>Class Name</th>
+<th>Medical report</th>
+<th>Laptop serial</th>
+<th>Big sister</th>
+<th>Passport Number</th>
+<th>Guardian</th>
+<th>District</th>
+<th>Nationality</th>
+<th>passport_photo</th>
+
+</tr>
+<tr>
+{% for student in students %}
+<td>{{student.first_name}}</td>
+<td>{{student.last_name}}</td>
+<td>{{student.gender}}</td>
+<td>{{student.age}}</td>
+<td>{{student.email}}</td>
+<td>{{student.languages}}</td>
+<td>{{student.id_number}}</td>
+<td>{{student.phone_number}}</td>
+<td>{{student.room_number}}</td>
+<td>{{student.mentors_name}}</td>
+<td>{{student.class_name}}</td>
+<td>{{student.medical_report}}</td>
+<td>{{trainer.laptop_serial}}</td>
+<td>{{student.big_sister}}</td>
+<td>{{student.passport_number}}</td>
+<td>{{student.guardian}}</td>
+<td>{{student.district}}</td>
+<td>{{student.nationality}}</td>
+<td>{{student.passport_photo}}</td>
+
+
+
+</tr>
+{% endfor %}
+</table>
+</table>
+<style>
+body{
+   background-color: rgb(69, 196, 196);
+}
+.heading{
+    
+    text-align: center;
+}
+
+</style>
+</body>
+</html>

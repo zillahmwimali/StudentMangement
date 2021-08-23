@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers_list</title>
+</head>
+<body> 
+    <table>
+    <table class="table table-striped">
+        <div class="heading">
+            <h1>Trainers List</h1>
+        </div>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Nationality</th>
+<th>Gender</th>
+<th>Age</th>
+<th>ID Number</th>
+<th>Phone Number</th>
+<th>Email</th>
+<th>Profession</th>
+<th>Company</th>
+<th>Job title</th>
+<th>Unit</th>
+<th>Unit Code</th>
+<th>Lesson per month</th>
+<th>Course duration</th>
+<th>Syllabus</th>
+<th>Contract</th>
+<th>Account Number</th>
+<th>Resume</th>
+<th>Photo</th>
+
+
+</tr>
+<tr>
+{% for trainer in trainers %}
+<td>{{trainer.first_name}}</td>
+<td>{{trainer.last_name}}</td>
+<td>{{trainer.nationality}}</td>
+<td>{{trainer.gender}}</td>
+<td>{{trainer.age}}</td>
+<td>{{trainer.id_number}}</td>
+<td>{{trainer.phone_number}}</td>
+<td>{{trainer.email}}</td>
+<td>{{trainer.profession}}</td>
+<td>{{trainer.company}}</td>
+<td>{{trainer.job_title}}</td>
+<td>{{trainer.unit}}</td>
+<td>{{trainer.unit_code}}</td>
+<td>{{trainer.lessons_per_month}}</td>
+<td>{{trainer.course_duration}}</td>
+<td>{{trainer.syllabus}}</td>
+<td>{{trainer.contract}}</td>
+<td>{{trainer.bank_account_number}}</td>
+<td>{{trainer.resume}}</td>
+<td>{{trainer.photo}}</td>
+</tr>
+{% endfor %}
+</table>
+</table>
+<style>
+body{
+background:rgb(69, 196, 196);
+}
+.heading{
+    
+    text-align: center;
+}
+</style>
+</body>
+</html>
